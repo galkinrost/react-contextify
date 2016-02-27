@@ -21,4 +21,25 @@ export default contextify({
 }, props => ({
     foo: props.bar
 }))(ContextProvider)
+
+
+...
+
+const ContextHandler = (_, context) => (...)
+
+ContextHandler.contextTypes = {
+    foo: PropTypes.string
+}
+
+...
+<ContextProvider bar="baz">
+...
+    <ContextHandler />
+...
+</ContextProvider>
 ```
+
+## License
+
+**MIT**
+
